@@ -1,0 +1,29 @@
+# Colors (Nordic)
+
+[colors.primary]
+background = '#2b2b2b'
+foreground = '#D8DEE9'
+
+[colors.normal]
+black = '#151515'
+red = '#e12427'
+green = '#3ee352'
+yellow = '#e2b22c'
+blue = '#2c7bcb'
+magenta = '#9a27dc'
+cyan = '#19d2d2'
+white = '#e6e6e6'
+
+[colors.bright]
+black = '#202020'
+red = '#f04043'
+green = '#5afb6d'
+yellow = '#fad15f'
+blue = '#559ce4'
+magenta = '#b657ed'
+cyan = '#40eeee'
+white = '#ffffff'
+
+[colors.selection]
+text = '#000000'
+background = '#F0DFAF'
