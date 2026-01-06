@@ -5,15 +5,15 @@
     "height": 24,
     "modules-left": [
         "custom/logo",
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "tray",
+        "memory",
+        "network",
     ],
     "modules-center": [
         "clock"
     ],
     "modules-right": [
-        "tray",
-        "memory",
-        "network",
         "wireplumber",
         "battery",
         "custom/power"
