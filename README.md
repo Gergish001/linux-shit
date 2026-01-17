@@ -1,3 +1,6 @@
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/83bb9b00-f29b-48f3-818a-c37122e48123" />
+
+
 # Blyat .dotfiles
 мой конфиг (спиздил слегка у других) который мне пиздец как нравится
 
