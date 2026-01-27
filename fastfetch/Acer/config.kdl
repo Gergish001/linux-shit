@@ -76,7 +76,7 @@ input {
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-output "LVDS-1" {
+//output "LVDS-1" {
     mode "1366x768@59.959"
     scale 1
     transform "normal"
@@ -136,7 +136,7 @@ layout {
         // off
 
         // How many logical pixels the ring extends out from the windows.
-        width 1.67
+        width 1
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -144,28 +144,24 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#ffffff22"
+        // active-color "#657e9764"
 
         // Color of the ring on inactive monitors.
         //
         // The focus ring only draws around the active window, so the only place
         // where you can see its inactive-color is on other monitors.
-        inactive-color "#2d2d2d38"
+        // inactive-color "#2d2d2d38"
 
         // You can also use gradients. They take precedence over solid colors.
         // Gradients are rendered the same as CSS linear-gradient(angle, from, to).
         // The angle is the same as in linear-gradient, and is optional,
-        // defaulting to 180 (top-to-bottom gradient).
+        // defaulting to 225 (top-to-bottom gradient).
         // You can use any CSS linear-gradient tool on the web to set these up.
         // Changing the color space is also supported, check the wiki for more info.
         //
-        // active-gradient from="#80c8ff" to="#c7ff7f" angle=45
+        active-gradient from="#ffffff2b" to="#4a4a4a55" angle=225
 
-        // You can also color the gradient relative to the entire view
-        // of the workspace, rather than relative to just the window itself.
-        // To do that, set relative-to="workspace-view".
-        //
-        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+        inactive-gradient from="#50505001" to="#80808001" angle=225
     }
 
     // You can also add a border. It's similar to the focus ring, but always visible.
@@ -174,21 +170,12 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
 
 
-        width 3
+        width 2
 
-
-        active-color "#ffffff03"
-        inactive-color "#5050503a"
-
-        // Color of the border around windows that request your attention.
         urgent-color "#f1c608ff"
-
-        // Gradients can use a few different interpolation color spaces.
-        // For example, this is a pastel rainbow gradient via in="oklch longer hue".
-        //
-        // active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
-
-        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+        active-gradient from="#ffffff70" to="#000000c6" angle=225
+        
+        inactive-gradient from="#50505001" to="#80808001" angle=225
     }
 
     // You can enable drop shadows for windows.
@@ -482,8 +469,10 @@ binds {
     // These binds are also affected by touchpad's natural-scroll, so these
     // example binds are "inverted", since we have natural-scroll enabled for
     // touchpads by default.
-    // Mod+TouchpadScrollDown { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02+"; }
-    // Mod+TouchpadScrollUp   { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02-"; }
+    Mod+TouchpadScrollDown { focus-workspace-down; }
+    Mod+TouchpadScrollUp   { focus-workspace-up; }
+    Mod+TouchpadScrollLeft   { focus-column-left; }
+    Mod+TouchpadScrollRight   { focus-column-right; }
 
     // You can refer to workspaces by index. However, keep in mind that
     // niri is a dynamic workspace system, so these commands are kind of
